@@ -1,0 +1,72 @@
+body{                                                                       
+    margin: 0;
+}
+
+.menu{
+    height: 100vh;
+    padding-left: 20px;
+    background-image: linear-gradient(darkblue,black);
+}
+
+.container{
+    position: relative;
+    width: 300px;
+    left: -300px;
+    transition: all .8s;
+}
+
+input{
+    display: none;
+}
+
+label{
+    display: block;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+label::before{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    content: "⌂";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+input:checked+.container{
+    left: 0;
+    transition: all 1s;
+} 
+
+input:checked+.container label::before{
+    content:"X";
+    background-color: transparent;
+}
+
+h1{
+    color: white;
+    padding-top: 25px;
+}
+
+a{
+    color:white
+}
+
+a:hover{
+    color: rgb(240, 56, 56);
+}
+
+.menu li{
+    margin: 45px 20px;
+}
+
+ul{
+    padding: 20px;
+}
+
+
